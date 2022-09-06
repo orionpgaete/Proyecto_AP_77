@@ -11,6 +11,21 @@
     <p>El nombre del alumnos es : {{nom_persona}} {{apel_persona}}</p>
 
     <p>La fecha de hoy : {{fecha.day}}/{{fecha.month}}/{{fecha.year}} y la hora es {{fecha.hour}}:{{fecha.minute}}</p>
+
+    <p>
+        <ul>
+            {% if temas%}
+                 {% for elTema in temas%}
+
+                    <li>{{elTema}}</li>
+
+                {% endfor%}
+            {%else%}
+                <p>No hay elementos que mostrar - Buenas Noches¡¡¡¡</p>
+            {% endif%}
+        </ul>
+
+    </p>
 </body>
 </html>
 

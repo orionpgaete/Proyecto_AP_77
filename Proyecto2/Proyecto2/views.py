@@ -22,7 +22,7 @@ def plantilla(request): # Primera Vista
 
     doc_externo.close()
 
-    context = Context({"nom_persona":p1.nombre, "apel_persona":p1.apellido, "fecha":ahora})
+    context = Context({"nom_persona":p1.nombre, "apel_persona":p1.apellido, "fecha":ahora, "temas":["Plantillas","Modelos", "Formulario", "Vistas", "Despliegue"]})
 
     documento = plantilla.render(context)
     

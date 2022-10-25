@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Listado de Proyectos</title>
+</head>
+<body class="container mt-5">
+    <div class="alert alert-info display-1 text-center">Listado de Proyecto </div>
+
+    {% if proyecto %}
+    <table class="table table-striped table-inverse table-responsive">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Termino</th>
+                <th>Responsable</th>
+                <th>Prioridad</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for pro in proyecto %}
+            <tr>
+                <td>{{pro.nombre}}</td>
+                <td>{{pro.fechainicio}}</td>
+                <td>{{pro.fechatermino}}</td>
+                <td>{{pro.responsable}}</td>
+                <td>{{pro.prioridad}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <div class="alert alert-warning " role="alert">
+        <strong>No se encuentran proyectos en el sistema</strong>
+    </div>
+
+    {% endif %}
+    
+    <a href="../" class="btn btn-danger">VOLVER</a>
+    <a href="../agregar" class="btn btn-info float-end">AGREGAR PROYECTO</a>
+</body>
+</html>

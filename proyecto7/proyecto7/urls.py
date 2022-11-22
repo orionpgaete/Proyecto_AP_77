@@ -19,6 +19,7 @@ from Api_Proyecto import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('empleados/', views.verempleados),
+    path('empleado/', views.verempleados),
+    path('empleados/', views.verempleadosDB),
     
 ]

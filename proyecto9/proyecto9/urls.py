@@ -21,4 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('estudiantes/', views.ListaEstudiantes.as_view()),
     path('estudiante/<int:pk>', views.DetalleEstudiante.as_view()),
+    path
 ]
+
